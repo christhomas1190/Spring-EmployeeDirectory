@@ -1,3 +1,5 @@
+
+package io.zipcoder.persistenceapp;
 import javax.persistence.*;
 import java.util.List;
 
