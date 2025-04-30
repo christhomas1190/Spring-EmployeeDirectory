@@ -29,4 +29,11 @@ public class DirectoryService {
         return employeeRepository.save(employee);
     }
 
+    public Department setDepartmentManager(Long deptId, Long managerId){
+        Department dept = departmentRepository.findOne(deptId);
+        Employee manager = employeeRepository.findOne(managerId);
+        dept.setManager(manager);
+        return departmentRepository.save(dept);
+    }
+
 }
